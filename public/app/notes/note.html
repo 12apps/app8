@@ -1,0 +1,11 @@
+<div>
+  
+ <ul ui-view="">
+   <li ng-repeat="note in notes">
+     {{note.body}}
+     <button class="btn btn-default" ng-click="deleteNote(note)">Delete</button>
+     <a ui-sref="notes.edit({id: note._id})">Edit</a>
+   </li>
+   
+ </ul>
+</div>

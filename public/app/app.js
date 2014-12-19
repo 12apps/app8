@@ -1,6 +1,4 @@
-var notesTracker = angular.module('notesTracker' , []) ;
-
-notesTracker.controller('notesController' ,function($scope){
-  $scope.var = "test" ;
-
-})
+var notesTracker = angular.module('notesTracker' , [
+  'ui.router',
+  'ngResource'
+]) ;
