@@ -9,7 +9,7 @@ router.get('/', notesController.index);
 router.get('/:id' , notesController.read);
 
 // create note
-router.post('/:id' , notesController.create);
+router.post('/' , notesController.create);
 
 // update note
 router.put('/:id' , notesController.update);
