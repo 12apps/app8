@@ -1,4 +1,11 @@
 <div>
   Edit view
-  
+  <form>
+    <input type="text" ng-model='note.title'>
+        <input type="text" ng-model='note.body'>
+            <input type="text" ng-model='note.lat'>
+    <input type="text" ng-model='note.lon'>
+
+        <button class="btn btn-default" ng-click="updateNote(note)">update</button>
+  </form>
 </div>

@@ -8,6 +8,11 @@ notesTracker.config(function($stateProvider){
     url:'/:id' ,
     templateUrl: '/app/notes/edit.html',
     controller: 'noteController'
+  })
+   .state('notes.new' , {
+    url:'/new' ,
+    templateUrl: '/app/notes/new.html',
+    controller: 'noteController'
   });
 
 });
@@ -18,9 +23,6 @@ notesTracker.factory('Note', function($resource){
   }, {
     update: {
       method: 'PUT'
-    } ,
-    remove : {
-      method: 'DELETE'
-    }
+    } 
   })
 })

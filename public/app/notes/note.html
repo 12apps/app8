@@ -1,11 +1,28 @@
-<div>
-  
- <ul ui-view="">
-   <li ng-repeat="note in notes">
-     {{note.body}}
-     <button class="btn btn-default" ng-click="deleteNote(note)">Delete</button>
-     <a ui-sref="notes.edit({id: note._id})">Edit</a>
-   </li>
-   
- </ul>
-</div>
+<a ui-sref="notes.new()">Create New</a>
+<div ui-view="">
+
+  <div class="container">
+    <div class="row-fluid"  ng-repeat="note in notes">
+      <div class="span8">
+              <map center="current-location" zoom="6">
+        <info-window position="current-location" visible="true">
+          <span>Loation found using HTML5.</span>
+        </info-window>
+      </map>
+
+
+          </div>
+
+        <div class="span4">
+          <h2>{{note.title}}</h2>
+          <address>
+            <strong>{{note.body}}</strong><br>
+          </address>
+          <button class="btn btn-default" ng-click="deleteNote(note)">Delete</button>
+          <a ng-href="#/notes/{{note._id}}">Edit</a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
